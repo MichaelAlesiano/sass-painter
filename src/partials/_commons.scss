@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  background: #e8e8e8;
+}
+
+a {
+  color: $mainWhite;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+i {
+  color: $iconsColor;
+}
+
+.container {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.6em;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.3em;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.btn {
+  @include basicBtn;
+}

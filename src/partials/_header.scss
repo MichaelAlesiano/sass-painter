@@ -1,0 +1,171 @@
+// Header
+header {
+  height: 100px;
+  background: $mainBlack;
+
+  // Top header
+  .top_header {
+    @include flex(flex-end);
+    height: 50%;
+
+    .top_nav {
+      margin-right: 15px;
+
+      ul li {
+        margin-right: 15px;
+
+        a {
+          color: rgba(211, 211, 211, 0.5);
+          @include smoothT(0.1s);
+
+          &:hover {
+            color: $mainWhite;
+            text-decoration: underline;
+          }
+
+          i {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  // Main header
+  .main_header {
+    @include flex(flex-start);
+    height: 50%;
+
+    img {
+      margin-right: 40px;
+      margin-top: 5px;
+      width: 8%;
+      align-self: flex-start;
+      cursor: pointer;
+    }
+
+    .main_nav {
+      height: 100%;
+      line-height: 50px;
+
+      ul {
+        li {
+          position: relative;
+          padding: 0 20px;
+
+          &:hover {
+            background: $mainWhite;
+            cursor: pointer;
+
+            a {
+              color: $mainBlack;
+            }
+
+            i {
+              color: rgb(73, 47, 47);
+            }
+          }
+
+          a i {
+            color: rgba(211, 211, 211, 0.5);
+            font-size: 0.8em;
+            margin-left: 5px;
+          }
+
+          .dropdown {
+            display: none;
+            background: $mainWhite;
+            position: absolute;
+            left: 0;
+            z-index: 1;
+
+            li {
+              width: 220px;
+              @include flex(space-between);
+
+              &:hover {
+                background: #e6e6e6;
+                cursor: pointer;
+
+                i {
+                  color: $mainBlack;
+                }
+              }
+
+              a {
+                color: $mainBlack;
+              }
+
+              i {
+                color: rgba(211, 211, 211, 0.5);
+              }
+            }
+          }
+        }
+
+        .product:hover {
+          .products {
+            display: block;
+
+            li {
+              position: relative;
+            }
+
+            .dropdown2 {
+              display: none;
+              background: #e6e6e6;
+              position: absolute;
+              top: 0;
+              left: 220px;
+
+              li {
+                width: 330px;
+
+                &:hover {
+                  background: #d6d6d6;
+                  cursor: pointer;
+                }
+              }
+            }
+
+            .edudrop:hover {
+              .edudrops {
+                display: block;
+              }
+            }
+
+            .mobile:hover {
+              .mobiles {
+                display: block;
+              }
+            }
+
+            .wacom:hover {
+              .wacoms {
+                display: block;
+              }
+            }
+          }
+        }
+
+        .brush:hover {
+          .brushes {
+            display: block;
+          }
+        }
+
+        .support:hover {
+          .supports {
+            display: block;
+          }
+        }
+
+        .learning:hover {
+          .learnings {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
